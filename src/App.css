@@ -1,0 +1,69 @@
+.App {
+  width: 90%;
+  background-color: green;
+  box-sizing: border-box;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button-card {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minMax(8rem, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.card {
+  height: 15rem;
+  width: 90%;
+  border: 0.1rem solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: white;
+}
+
+.rank {
+  text-align: center;
+  display: flex;
+}
+.symbol {
+  font-size: 2rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+.black {
+  color: black;
+}
+
+@media screen and (max-width: 786px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minMax(8rem, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 786px) and (max-width: 1023px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minMax(8rem, 1fr));
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(5, minMax(8rem, 1fr));
+    gap: 2rem;
+  }
+  .card {
+    height: 18rem;
+  }
+}
